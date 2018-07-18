@@ -1,9 +1,19 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
+const containerStyle = {
+	marginTop: 25,
+	backgroundColor: '#FFFFFF',
+
+}
+
+const titleStyle = {
+	fontSize:50
+}
+
 const Header = (props) =>(
-	<View>
-		<Text>Header aqui</Text>
+	<View style={containerStyle}>
+		<Text style={titleStyle}> Header aqui</Text>
 	</View>	
 	);
 
