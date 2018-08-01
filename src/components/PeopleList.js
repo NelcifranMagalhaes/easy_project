@@ -4,10 +4,12 @@ import PeopleListItem from './PeopleListItem';
 
 
 const PeopleList = props =>{
-    const {peoples} = props;
+    const {peoples,onPressItem} = props;
+
     const items = peoples.map(people =>{
         return (<PeopleListItem 
-                key={people.name.first} people = {people}/>);
+                key={people.name.first} people = {people}
+                navigateToPeopleDetail={onPressItem}/>);
         
     });
     
