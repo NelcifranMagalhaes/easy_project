@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
         flex: 7
     },
     avatar:{
-        aspecRatio: 1,
-        flex: 1,
+        width: 50,
+        height: 50,
         marginLeft: 15,
         borderRadius: 50
     }

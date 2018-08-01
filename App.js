@@ -27,6 +27,7 @@ export default createStackNavigator({
     navigationOptions:{
         title: 'Pessoas!',
         headerTintColor: 'white',
+        
         headerStyle:{
             backgroundColor: '#6ca2f7',
             borderBottomWidth:1,
