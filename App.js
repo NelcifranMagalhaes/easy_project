@@ -22,7 +22,9 @@ export default createStackNavigator({
             });
 
         }
-    }
+    },'Main':{
+        screen: PeoplePage
+    },
 },{
     navigationOptions:{
         title: 'Pessoas!',

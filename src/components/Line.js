@@ -1,15 +1,18 @@
 import React from 'react';
 import {View,Text, StyleSheet} from 'react-native';
 
-const Line = ({label,content}) => {
+const Line = ({label  = "-",content = "-" }) => { // para não dá pau se passar vazio o label
 	return (
 	    <View style={styles.line}>
-	        <Text style={[styles.cell,styles.label]}>{label} </Text>
-	        <Text style={styles.cell}>{content}</Text>
+	        <Text style={[
+	        	styles.cell,
+	        	styles.label,
+	        	label.length > 8 ? styles.longLabel : null //para caso o label seja muito grande
+	        	]}>{label} </Text>
+	        <Text style={styles.cell,styles.content}>{content}</Text>
 	    </View>
 		);
 }
-
 
 const styles = StyleSheet.create({
 	line: {
@@ -27,6 +30,14 @@ const styles = StyleSheet.create({
 
 	label:{
 	    fontWeight: 'bold',
+	    flex: 1
+	},
+	content: {
+		flex: 3
+	},
+
+	longLabel: {
+		fontSize: 12,
 	}
 });
 
