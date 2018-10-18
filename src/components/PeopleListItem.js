@@ -6,7 +6,7 @@ const PeopleListItem = props =>{
     const {people,navigateToPeopleDetail} = props;
     const {title,first,last} = people.name;
     return (
-        <TouchableOpacity onPress={()=> {console.log('Clicou em min!!!', first)
+        <TouchableOpacity onPress={()=> {
             navigateToPeopleDetail({people});
         }}>
             <View style={styles.line}>
